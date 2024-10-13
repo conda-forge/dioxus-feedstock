@@ -1,5 +1,5 @@
 {% set name = "dioxus" %}
-{% set version = "0.5.2" %}
+{% set version = "0.5.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/DioxusLabs/dioxus/archive/v{{ version }}.tar.gz
-  sha256: 7ffbf826234f819a3bac1af56e6bbf2e6fb02b0909638f7ec17840c7dc1cacfd
+  sha256: 49f0fdc041dddd571d1365421bd668a8cbd8063ff4e9f9bfa9ef54d4c6d34aeb
 
 build:
   number: 0
