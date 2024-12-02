@@ -1,12 +1,12 @@
-{% set name = "dioxus" %}
-{% set version = "0.5.7" %}
+context:
+  version: 0.5.7
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: dioxus
+  version: ${{ version }}
 
 source:
-  url: https://github.com/DioxusLabs/dioxus/archive/v{{ version }}.tar.gz
+  url: https://github.com/DioxusLabs/dioxus/archive/v${{ version }}.tar.gz
   sha256: 49f0fdc041dddd571d1365421bd668a8cbd8063ff4e9f9bfa9ef54d4c6d34aeb
 
 build:
@@ -14,28 +14,28 @@ build:
 
 requirements:
   build:
-    - {{ compiler('rust') }}
-    - {{ compiler('c') }}
-    - {{ stdlib('c') }}
+    - ${{ compiler('rust') }}
+    - ${{ compiler('c') }}
+    - ${{ stdlib('c') }}
     - cargo-bundle-licenses
     - make
     - pkg-config
   host:
     - openssl
 
-test:
-  commands:
-    - dx --help
+tests:
+  - script:
+      - dx --help
 
 about:
-  home: https://github.com/DioxusLabs/dioxus
   license: Apache-2.0 AND MIT
   license_file:
     - LICENSE-APACHE
     - LICENSE-MIT
     - THIRDPARTY.yml
   summary: Fullstack app framework for web, desktop, mobile, and more.
-  dev_url: https://github.com/DioxusLabs/dioxus
+  homepage: https://github.com/DioxusLabs/dioxus
+  repository: https://github.com/DioxusLabs/dioxus
 
 extra:
   recipe-maintainers:
