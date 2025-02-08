@@ -1,5 +1,5 @@
 context:
-  version: 0.5.7
+  version: "0.6.3"
 
 package:
   name: dioxus
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/DioxusLabs/dioxus/archive/v${{ version }}.tar.gz
-  sha256: 49f0fdc041dddd571d1365421bd668a8cbd8063ff4e9f9bfa9ef54d4c6d34aeb
+  sha256: 85aee32b0f86ac094451e533c5874d178d47e08b764b7a815d36cb91b80f042a
 
 build:
   number: 0
