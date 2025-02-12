@@ -1,2 +1,6 @@
 rust_compiler_version:
   - 1.79
+c_stdlib_version:        # [osx]
+  - "13.0"               # [osx]
+MACOSX_SDK_VERSION:      # [osx]
+  - "13.0"               # [osx]
