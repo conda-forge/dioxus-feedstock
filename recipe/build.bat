@@ -1,3 +1,6 @@
+@echo on
+@setlocal EnableDelayedExpansion
+
 set CARGO_PROFILE_RELEASE_STRIP=symbols
 set CARGO_PROFILE_RELEASE_LTO=thin
 set OPENSSL_DIR=%LIBRARY_PREFIX%
@@ -9,7 +12,7 @@ cargo-bundle-licenses --format yaml --output THIRDPARTY.yml || goto :error
 :: build
 cargo install --bins --no-track --locked --root "%LIBRARY_PREFIX%" --path .\packages\cli || goto :error
 
-goto :EOF
+goto :eof
 
 :error
 echo Failed with error #%errorlevel%.
