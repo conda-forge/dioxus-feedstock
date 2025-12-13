@@ -6,6 +6,8 @@ set CARGO_PROFILE_RELEASE_LTO=thin
 set OPENSSL_DIR=%LIBRARY_PREFIX%
 set OPENSSL_NO_VENDOR=1
 
+copy %BUILD_PREFIX%\Library\lib\libssh2.lib %BUILD_PREFIX%\Library\lib\ssh2.lib
+
 :: check licenses
 cargo-bundle-licenses --format yaml --output THIRDPARTY.yml || goto :error
 
