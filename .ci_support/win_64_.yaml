@@ -6,6 +6,8 @@ channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
+libgit2:
+- '1.9'
 openssl:
 - '3.5'
 rust_compiler:

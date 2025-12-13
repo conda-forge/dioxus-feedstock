@@ -12,6 +12,8 @@ channel_targets:
 - conda-forge main
 docker_image:
 - quay.io/condaforge/linux-anvil-x86_64:alma9
+libgit2:
+- '1.9'
 openssl:
 - '3.5'
 rust_compiler:
