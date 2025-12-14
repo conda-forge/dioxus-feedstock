@@ -25,7 +25,7 @@ exec ${CC} ${CFLAGS} ${LDFLAGS} "\$@"
 EOF
 fi
 chmod +x ${BUILD_PREFIX}/bin/cc_shim
-export CC=${BUILD_PREIFIX}/bin/cc_shim
+export CC=${BUILD_PREFIX}/bin/cc_shim
 
 # export PKG_CONFIG_PATH="${BUILD_PREFIX}/lib/pkgconfig:${PKG_CONFIG_PATH}"
 # if [[ ${target_platform} =~ .*osx.* ]]; then
