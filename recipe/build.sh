@@ -12,6 +12,7 @@ export PKG_CONFIG_ALLOW_CROSS=1
 if [[ ${build_platform} != ${target_platform} ]]; then
 tee ${BUILD_PREFIX}/bin/cc_shim << EOF
 #!/bin/sh
+set -o xtrace
 if [[ "\$@" =~ build-script* || "\$@" =~ build_script* ]]; then
     exec \${CC_FOR_BUILD} \${CFLAGS//\${PREFIX}/\${BUILD_PREFIX}} \${LDFLAGS//\${PREFIX}/\${BUILD_PREFIX}} "\$@"
 else
