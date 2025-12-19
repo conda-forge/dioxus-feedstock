@@ -12,7 +12,7 @@ export PKG_CONFIG_ALLOW_CROSS=1
 if [[ ${target_platform} == "osx-arm64" ]]; then
 tee ${BUILD_PREFIX}/bin/cc_shim << EOF
 #!/bin/sh
-if [[ "\$@" =~ build_script* ]]; then
+if [[ "\$@" =~ build-script* ]]; then
     exec \${CC_FOR_BUILD} \${CFLAGS//\${PREFIX}/\${BUILD_PREFIX}} \${LDFLAGS//\${PREFIX}/\${BUILD_PREFIX}} "\$@"
 else
     exec \${CC} \${CFLAGS} \${LDFLAGS} "\$@"
