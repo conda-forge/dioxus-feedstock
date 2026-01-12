@@ -9,7 +9,7 @@ export OPENSSL_NO_VENDOR=1
 export LIBGIT2_NO_VENDOR=1
 export PKG_CONFIG_ALLOW_CROSS=1
 
-if [[ ${build_platform} != ${target_platform} ]]; then
+# if [[ ${build_platform} != ${target_platform} ]]; then
 tee ${BUILD_PREFIX}/bin/cc_shim << EOF
 #!/bin/sh
 set -o xtrace
@@ -21,7 +21,7 @@ fi
 EOF
 chmod +x ${BUILD_PREFIX}/bin/cc_shim
 export CC=${BUILD_PREFIX}/bin/cc_shim
-fi
+# fi
 # else
 # tee ${BUILD_PREFIX}/bin/cc_shim << EOF
 # #!/bin/sh
