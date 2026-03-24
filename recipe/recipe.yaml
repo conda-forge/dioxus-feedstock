@@ -1,5 +1,5 @@
 context:
-  version: "0.6.3"
+  version: "0.7.3"
 
 package:
   name: dioxus
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/DioxusLabs/dioxus/archive/v${{ version }}.tar.gz
-  sha256: 85aee32b0f86ac094451e533c5874d178d47e08b764b7a815d36cb91b80f042a
+  sha256: 778f834411592a4f0c531a2356afce80374778a482e85c8295ec19db1d98e045
 
 build:
   number: 0
@@ -20,6 +20,8 @@ requirements:
     - cargo-bundle-licenses
     - make
     - pkg-config
+    - if: osx and arm64
+      then: ld64
   host:
     - openssl
 
