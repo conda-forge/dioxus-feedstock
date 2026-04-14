@@ -22,6 +22,8 @@ requirements:
     - pkg-config
   host:
     - openssl
+    - if: win
+      then: libssh2
 
 tests:
   - script:
