@@ -1,5 +1,5 @@
 context:
-  version: "0.6.3"
+  version: "0.7.5"
 
 package:
   name: dioxus
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/DioxusLabs/dioxus/archive/v${{ version }}.tar.gz
-  sha256: 85aee32b0f86ac094451e533c5874d178d47e08b764b7a815d36cb91b80f042a
+  sha256: 7b3d6fc8eab656fed9b0b54d40ff8f58450ff6a652208c28ca8b9defaff9ee9f
 
 build:
   number: 0
@@ -22,6 +22,8 @@ requirements:
     - pkg-config
   host:
     - openssl
+    - if: win
+      then: libssh2
 
 tests:
   - script:
