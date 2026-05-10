@@ -1,2 +1,8 @@
 MACOSX_SDK_VERSION:      # [osx]
   - "13.3"               # [osx]
+
+# `vs2022` does not properly setup the msvc-build-tools,
+# this causes build failure in `ring` dependency (it depdends on `cl.exe` from msvc).
+# ref: https://github.com/conda-forge/compilers-feedstock/issues/66
+c_compiler:    # [win]
+- vs2019       # [win]
